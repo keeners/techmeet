@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile
+    network_mode: "bridge"
+    container_name: techmeet
+    image: keeners/techmeet
+    ports:
+      - "8000"
+    volumes:
+      - .:/usr/src/app
+    command: /bin/bash
+    tty: true
+    stdin_open: true
