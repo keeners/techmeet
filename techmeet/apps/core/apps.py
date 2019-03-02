@@ -1,5 +1,8 @@
+"""App Config."""
 from django.apps import AppConfig
 
 
 class CoreConfig(AppConfig):
-    name = 'core'
+    """Config for core module."""
+
+    name = "core"
