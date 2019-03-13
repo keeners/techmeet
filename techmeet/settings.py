@@ -130,8 +130,8 @@ REST_FRAMEWORK = {
 
 # https://github.com/owais/django-webpack-loader
 WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',
+    "DEFAULT": {
+        "BUNDLE_DIR_NAME": "bundles/",
         "STATS_FILE": str(BASE_DIR / "techmeet/apps/frontend/webpack-stats.json"),
     }
 }
