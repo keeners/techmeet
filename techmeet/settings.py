@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third Party
     "rest_framework",
+    "webpack_loader",
+    # Local
+    "frontend",
 ]
 
 MIDDLEWARE = [
@@ -123,4 +126,12 @@ STATIC_URL = "/static/"
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
+}
+
+# https://github.com/owais/django-webpack-loader
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/',
+        "STATS_FILE": str(BASE_DIR / "techmeet/apps/frontend/webpack-stats.json"),
+    }
 }
