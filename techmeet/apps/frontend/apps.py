@@ -1,5 +1,8 @@
+"""Frontend Apps."""
 from django.apps import AppConfig
 
 
 class FrontendConfig(AppConfig):
-    name = 'frontend'
+    """Frontend Config."""
+
+    name = "frontend"
