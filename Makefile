@@ -15,9 +15,15 @@ down: ## Stop the container
 enter: ## Enter the running container
 	docker-compose -p techmeet exec backend /bin/bash
 
+enter_frontend: ## Enter the running container
+	docker-compose -p techmeet exec frontend /bin/sh
+
 clean: down ## Remove stoped containers
 	docker-compose -p techmeet rm
 
 lint: ## Run linters on code
 	docker-compose -p techmeet exec backend bash -c "flake8 ."
 	docker-compose -p techmeet exec backend bash -c "black --diff --check --exclude 'migrations|node_modules' ."
+
+lint_frontend: ## Run linters on code
+	docker-compose -p techmeet exec frontend sh -c "npm run lint"

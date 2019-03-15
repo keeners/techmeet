@@ -10,7 +10,6 @@ module.exports = {
   output: {
     path: path.resolve("./static/frontend/bundles/"),
     filename: "[name]-[hash].js",
-    // TODO: replace public path with path to external docker URL
     publicPath: "http://localhost:3000/"
   },
   devServer: {
