@@ -27,14 +27,11 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PARTY_APPS = [
-    "rest_framework",
-    "webpack_loader",
-    # Local
+THIRD_PARTY_APPS = ["rest_framework"]
+
+LOCAL_APPS = [
     "frontend",
 ]
-
-LOCAL_APPS = []
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
