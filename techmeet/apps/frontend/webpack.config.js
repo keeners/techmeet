@@ -5,28 +5,29 @@ var BundleTracker = require("webpack-bundle-tracker");
 module.exports = {
   mode: "development",
   context: __dirname,
-  entry: ["./src/index"],
+  entry: "./src/index",
   devtool: "cheap-module-eval-source-map",
   output: {
-    path: path.resolve("./static/frontend/bundles/"),
+    path: path.resolve(__dirname, "static/frontend/bundles"),
     filename: "[name]-[hash].js",
     publicPath: "http://localhost:3000/"
   },
   devServer: {
-    contentBase: path.resolve("./static/frontend/bundles/"),
+    publicPath: "http://localhost:3000/",
     hot: true,
     port: "3000",
     host: "0.0.0.0",
     headers: {
       "Access-Control-Allow-Origin": "*"
-    }
+    },
+    overlay: true,
+    stats: "minimal",
   },
   module: {
     rules: [
-      // we pass the output from babel loader to react-hot loader
       {
-        test: /\.jsx?$/,
-        include: path.resolve("./src/"),
+        test: /\.m?jsx?$/,
+        include: path.resolve(__dirname, "src"),
         loaders: ["babel-loader"]
       },
       {
@@ -41,10 +42,11 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new BundleTracker({ filename: "./webpack-stats.json" })
+    new BundleTracker({ filename: "webpack-stats.json" })
   ],
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".jsx"]
   },
+  stats: "minimal",
 };

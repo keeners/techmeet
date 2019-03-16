@@ -4,8 +4,7 @@ services:
     build:
       context: ./
       dockerfile: ./docker/Dockerfile
-    networks:
-      - net
+    network_mode: "bridge"
     container_name: techmeet_backend
     image: keeners/techmeet_backend
     ports:
@@ -18,10 +17,7 @@ services:
   frontend:
     build:
       context: ./techmeet/apps/frontend
-    networks:
-      - net
-    depends_on:
-      - backend
+    network_mode: "bridge"
     container_name: techmeet_frontend
     image: keeners/techmeet_frontend
     ports:
@@ -32,6 +28,3 @@ services:
     command: /bin/sh
     tty: true
     stdin_open: true
-networks:
-  net:
-    driver: bridge
