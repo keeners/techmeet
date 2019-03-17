@@ -5,12 +5,26 @@ services:
       context: ./
       dockerfile: ./docker/Dockerfile
     network_mode: "bridge"
-    container_name: techmeet
-    image: keeners/techmeet
+    container_name: techmeet_backend
+    image: keeners/techmeet_backend
     ports:
       - "8000"
     volumes:
       - .:/usr/src/app
     command: /bin/bash
+    tty: true
+    stdin_open: true
+  frontend:
+    build:
+      context: ./techmeet/apps/frontend
+    network_mode: "bridge"
+    container_name: techmeet_frontend
+    image: keeners/techmeet_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./techmeet/apps/frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    command: /bin/sh
     tty: true
     stdin_open: true
