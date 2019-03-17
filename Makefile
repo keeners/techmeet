@@ -26,4 +26,4 @@ lint: ## Run linters on code
 	docker-compose -p techmeet exec backend bash -c "black --diff --check --exclude 'migrations|node_modules' ."
 
 lint_frontend: ## Run linters on code
-	docker-compose -p techmeet exec frontend sh -c "npm run lint"
+	docker-compose -p techmeet exec frontend sh -c "npm run --silent lint"
