@@ -3,7 +3,7 @@ services:
   backend:
     build:
       context: ./
-      dockerfile: ./docker/Dockerfile
+      dockerfile: ./docker/backend/Dockerfile
     network_mode: "bridge"
     container_name: techmeet_backend
     image: keeners/techmeet_backend
@@ -16,7 +16,8 @@ services:
     stdin_open: true
   frontend:
     build:
-      context: ./techmeet/apps/frontend
+      context: ./
+      dockerfile: ./docker/frontend/Dockerfile
     network_mode: "bridge"
     container_name: techmeet_frontend
     image: keeners/techmeet_frontend
