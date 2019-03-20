@@ -12,7 +12,7 @@ RUN apk update \
 
 # Add the project requirements
 # This will add the package.json and package-lock.json if it exists
-ADD techmeet/apps/frontend/package*.json /usr/src/app/
+ADD techmeet/frontend/package*.json /usr/src/app/
 
 # Install the requirements
 RUN /bin/bash -c 'cd /usr/src/app && npm install && npm cache clean --force'
