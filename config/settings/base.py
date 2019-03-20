@@ -111,6 +111,6 @@ REST_FRAMEWORK = {
 WEBPACK_LOADER = {
     "DEFAULT": {
         "BUNDLE_DIR_NAME": "bundles/",
-        "STATS_FILE": str(BASE_DIR / "techmeet/apps/frontend/webpack-stats.json"),
+        "STATS_FILE": str(BASE_DIR / "techmeet/frontend/webpack-stats.json"),
     }
 }

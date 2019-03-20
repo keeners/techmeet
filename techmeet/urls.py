@@ -2,8 +2,9 @@
 from django.contrib import admin
 from django.urls import include, path
 
-from core import views
 from rest_framework import routers
+
+from interface.api import views
 
 router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
