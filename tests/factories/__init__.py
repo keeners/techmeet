@@ -1,2 +1,1 @@
-from .user import UserFactory
-from .user import SuperUserFactory
+from .user import SuperUserFactory, UserFactory

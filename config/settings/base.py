@@ -29,10 +29,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = ["rest_framework"]
 
-LOCAL_APPS = [
-    "data",
-    "frontend",
-]
+LOCAL_APPS = ["data", "frontend"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -118,4 +115,4 @@ WEBPACK_LOADER = {
     }
 }
 
-AUTH_USER_MODEL = 'data.User'
+AUTH_USER_MODEL = "data.User"

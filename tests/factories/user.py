@@ -1,3 +1,5 @@
+"""User factories for fixtures."""
+
 import factory
 from faker import Factory as FakerFactory
 
@@ -9,8 +11,8 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     name = factory.LazyAttribute(lambda x: faker.name())
 
-    class Meta:
-        model = 'data.User'
+    class Meta:  # noqa D201
+        model = "data.User"
 
     @factory.lazy_attribute
     def email(self) -> str:
