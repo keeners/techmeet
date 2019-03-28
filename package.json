@@ -2,7 +2,7 @@
   "name": "techmeet",
   "version": "1.0.0",
   "description": "Client for techmeet app",
-  "main": "src/index.js",
+  "main": "techmeet/static/app/index.js",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
@@ -45,11 +45,5 @@
   "bugs": {
     "url": "https://github.com/keeners/techmeet/issues"
   },
-  "homepage": "https://github.com/keeners/techmeet#readme",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  }
+  "homepage": "https://github.com/keeners/techmeet#readme"
 }

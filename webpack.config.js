@@ -1,16 +1,16 @@
-var path = require("path");
-var webpack = require("webpack");
-var BundleTracker = require("webpack-bundle-tracker");
+var path = require("path")
+var webpack = require("webpack")
+var BundleTracker = require("webpack-bundle-tracker")
 
 module.exports = {
   mode: "development",
   context: __dirname,
-  entry: "./src/index",
+  entry: "./techmeet/static/app/index",
   devtool: "cheap-module-eval-source-map",
   output: {
-    path: path.resolve(__dirname, "static/frontend/bundles"),
+    path: path.resolve(__dirname, "techmeet/static/bundles"),
     filename: "[name]-[hash].js",
-    publicPath: "http://localhost:3000/"
+    publicPath: "http://localhost:3000/",
   },
   devServer: {
     publicPath: "http://localhost:3000/",
@@ -18,7 +18,7 @@ module.exports = {
     port: "3000",
     host: "0.0.0.0",
     headers: {
-      "Access-Control-Allow-Origin": "*"
+      "Access-Control-Allow-Origin": "*",
     },
     overlay: true,
     stats: "minimal",
@@ -27,26 +27,26 @@ module.exports = {
     rules: [
       {
         test: /\.m?jsx?$/,
-        include: path.resolve(__dirname, "src"),
-        loaders: ["babel-loader"]
+        include: path.resolve(__dirname, "techmeet/static/app"),
+        loaders: ["babel-loader"],
       },
       {
         test: /\.css$/,
-        loaders: ["style-loader", "css-loader"]
+        loaders: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ["file-loader"]
-      }
-    ]
+        use: ["file-loader"],
+      },
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new BundleTracker({ filename: "webpack-stats.json" })
+    new BundleTracker({ filename: "webpack-stats.json" }),
   ],
   resolve: {
     modules: ["node_modules"],
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx"],
   },
   stats: "minimal",
-};
+}
