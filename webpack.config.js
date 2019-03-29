@@ -19,6 +19,14 @@ module.exports = {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
+    proxy: {
+      '**': {
+        target: 'http://backend:8000',
+        headers: {
+          'X-From-Webpack': true,
+        },
+      }
+    },
     overlay: true,
     stats: "minimal",
   },

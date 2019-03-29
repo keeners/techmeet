@@ -1,4 +1,4 @@
-{% load static %}
+{% load static webpack_check %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,13 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      {% if request|is_from_webpack %}
+        <p>Using Webpack</p>
+      {% else %}
+        <p>Not using Webpack</p>
+      {% endif %}
+    </div>
     <script src="{% static 'bundles/main.js' %}"></script>
   </body>
 </html>

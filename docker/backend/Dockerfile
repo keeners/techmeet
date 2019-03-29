@@ -1,4 +1,4 @@
-FROM python:3.6-jessie
+FROM python:3.6-stretch
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y nginx  && \
