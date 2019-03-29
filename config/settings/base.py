@@ -104,11 +104,3 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
 }
-
-# https://github.com/owais/django-webpack-loader
-WEBPACK_LOADER = {
-    "DEFAULT": {
-        "BUNDLE_DIR_NAME": "bundles/",
-        "STATS_FILE": str(BASE_DIR / "webpack-stats.json"),
-    }
-}

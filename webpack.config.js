@@ -1,6 +1,5 @@
 var path = require("path")
 var webpack = require("webpack")
-var BundleTracker = require("webpack-bundle-tracker")
 
 module.exports = {
   mode: "development",
@@ -9,7 +8,7 @@ module.exports = {
   devtool: "cheap-module-eval-source-map",
   output: {
     path: path.resolve(__dirname, "techmeet/static/bundles"),
-    filename: "[name]-[hash].js",
+    filename: "[name].js",
     publicPath: "http://localhost:3000/",
   },
   devServer: {
@@ -40,10 +39,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new BundleTracker({ filename: "webpack-stats.json" }),
-  ],
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".jsx"],
