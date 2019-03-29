@@ -29,7 +29,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = ["rest_framework"]
 
-LOCAL_APPS = ["data", "frontend"]
+LOCAL_APPS = ["data"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
