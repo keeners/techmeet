@@ -2,7 +2,7 @@
   "name": "techmeet",
   "version": "1.0.0",
   "description": "Client for techmeet app",
-  "main": "src/index.js",
+  "main": "techmeet/static/app/index.js",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
@@ -20,7 +20,6 @@
     "prettier": "1.16.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
-    "webpack-bundle-tracker": "^0.4.2-beta",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
   },
@@ -45,11 +44,5 @@
   "bugs": {
     "url": "https://github.com/keeners/techmeet/issues"
   },
-  "homepage": "https://github.com/keeners/techmeet#readme",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  }
+  "homepage": "https://github.com/keeners/techmeet#readme"
 }
