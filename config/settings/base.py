@@ -29,7 +29,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = ["rest_framework"]
 
-LOCAL_APPS = ["frontend"]
+LOCAL_APPS = ["data", "frontend"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -114,3 +114,5 @@ WEBPACK_LOADER = {
         "STATS_FILE": str(BASE_DIR / "techmeet/frontend/webpack-stats.json"),
     }
 }
+
+AUTH_USER_MODEL = "data.User"

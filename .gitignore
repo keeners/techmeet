@@ -9,3 +9,4 @@ tags
 .idea
 .mypy_cache
 db.sqlite3
+.coverage

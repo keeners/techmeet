@@ -5,9 +5,6 @@ exclude =
 	__init__.py,
     settings,
     *.pyc,
-    multisite,
-    member_centre_old,
-    tests
 ignore = E126, E501, W503
 max-line-length = 88
 max-complexity = 18
