@@ -25,6 +25,6 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class TechGroupSerializer(serializers.HyperlinkedModelSerializer):
     """Tech Group serializer."""
 
-    class Meta: # noqa: D201
+    class Meta:  # noqa: D106
         model = models.TechGroup
         fields = ("id", "name", "slug", "description", "logo")

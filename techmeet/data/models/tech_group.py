@@ -3,7 +3,6 @@
 from typing import Any
 
 from django.db import models
-from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 from domain import utils
@@ -33,5 +32,5 @@ class TechGroup(models.Model):
             self.slug = utils.generate_unique_slug(TechGroup, self.name)
         super().save(*args, **kwargs)
 
-    class Meta: # noqa D201
+    class Meta:  # noqa D201
         verbose_name = "group"

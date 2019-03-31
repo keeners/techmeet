@@ -5,6 +5,7 @@ from django.contrib.auth.models import Group
 from rest_framework import viewsets
 
 from data import models
+
 from . import serializers
 
 User = get_user_model()

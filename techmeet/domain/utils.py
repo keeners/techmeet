@@ -1,8 +1,9 @@
 """Shared utilities."""
 
+from typing import Type
+
 from django.db import models
 from django.utils.text import slugify
-from typing import Type
 
 
 def generate_unique_slug(klass: Type[models.Model], field: str) -> str:
