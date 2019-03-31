@@ -1,2 +1,2 @@
 from .user import User
-from .group import TechGroup
+from .tech_group import TechGroup

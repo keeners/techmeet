@@ -9,9 +9,10 @@ from django.utils.translation import gettext_lazy as _
 from domain import utils
 
 
-def group_folder(instance: "TechGroup", filename: str) -> str:
+def tech_group_folder(instance: "TechGroup", filename: str) -> str:
     """File path for group files."""
-    return f"M/{instance.code}"
+    name = "".join(x for x in instance.name if x.isalnum())
+    return f"{name}/{filename}"
 
 
 class TechGroup(models.Model):
@@ -20,7 +21,7 @@ class TechGroup(models.Model):
     name = models.CharField(_("name"), max_length=255, unique=True)
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True)
-    logo = models.FileField(_("logo"), upload_to=group_folder, blank=True)
+    logo = models.FileField(_("logo"), upload_to=tech_group_folder, blank=True)
 
     def __str__(self) -> str:
         """Return name as a string."""
