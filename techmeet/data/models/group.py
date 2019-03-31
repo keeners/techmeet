@@ -17,10 +17,14 @@ def group_folder(instance: "TechGroup", filename: str) -> str:
 class TechGroup(models.Model):
     """A group that has events."""
 
-    name = models.CharField(_("name"), max_length=255)
+    name = models.CharField(_("name"), max_length=255, unique=True)
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True)
     logo = models.FileField(_("logo"), upload_to=group_folder, blank=True)
+
+    def __str__(self) -> str:
+        """Return name as a string."""
+        return self.name
 
     def save(self, *args: Any, **kwargs: Any) -> None:
         """Save a slug on save."""
