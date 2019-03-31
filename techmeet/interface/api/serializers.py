@@ -3,6 +3,8 @@ from django.contrib.auth.models import Group, User
 
 from rest_framework import serializers
 
+from data import models
+
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     """User Serializer."""
@@ -18,3 +20,11 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:  # noqa: D106
         model = Group
         fields = ("url", "name")
+
+
+class TechGroupSerializer(serializers.HyperlinkedModelSerializer):
+    """Tech Group serializer."""
+
+    class Meta: # noqa: D201
+        model = models.TechGroup
+        fields = ("id", "name", "slug", "description", "logo")
