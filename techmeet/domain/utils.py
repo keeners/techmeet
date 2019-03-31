@@ -1,10 +1,11 @@
 """Shared utilities."""
 
+from django.db import models
 from django.utils.text import slugify
 from typing import Type
 
 
-def generate_unique_slug(klass: Type, field: str) -> str:
+def generate_unique_slug(klass: Type[models.Model], field: str) -> str:
     """Return a unique slug.
 
     return unique slug if origin slug is exist.
@@ -12,8 +13,8 @@ def generate_unique_slug(klass: Type, field: str) -> str:
     """
     origin_slug = slugify(field)
     unique_slug = origin_slug
-    numb = 1
+    num = 1
     while klass.objects.filter(slug=unique_slug).exists():
-        unique_slug = '%s-%d' % (origin_slug, numb)
-        numb += 1
+        unique_slug = f"{origin_slug}-{num}"
+        num += 1
     return unique_slug
