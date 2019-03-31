@@ -5,6 +5,9 @@ MAINTAINER Bryan Hyshka <bryan@hyshka.com>
 # This allows npm package binaries to be available everywhere
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 
+# Inform Webpack that we are inside a Docker container
+ENV VIRTUAL_ENV docker
+
 # Update, install, and cleanup
 RUN apk update \
     && apk add bash \

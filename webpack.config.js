@@ -1,5 +1,7 @@
 var path = require("path")
 var webpack = require("webpack")
+var docker = process.env.VIRTUAL_ENV === "docker"
+var proxyServer = docker ? "http://backend:8000" : "http://localhost:8000"
 
 module.exports = {
   mode: "development",
@@ -9,23 +11,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "techmeet/static/bundles"),
     filename: "[name].js",
-    publicPath: "http://localhost:3000/",
+    publicPath: "/static/bundles/",
   },
   devServer: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "/static/bundles/",
     hot: true,
     port: "3000",
     host: "0.0.0.0",
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
     proxy: {
-      '**': {
-        target: 'http://backend:8000',
-        headers: {
-          'X-From-Webpack': true,
-        },
-      }
+      "**": proxyServer,
     },
     overlay: true,
     stats: "minimal",
