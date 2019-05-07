@@ -19,6 +19,8 @@ services:
       context: ./
       dockerfile: ./docker/frontend/Dockerfile
     network_mode: "bridge"
+    links:
+      - backend
     container_name: techmeet_frontend
     image: keeners/techmeet_frontend
     ports:
