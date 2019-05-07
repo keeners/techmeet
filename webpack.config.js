@@ -45,6 +45,9 @@ module.exports = {
   resolve: {
     modules: ["node_modules"],
     extensions: [".js", ".jsx"],
+    alias: {
+      "@": path.resolve(__dirname, "techmeet/static/app"),
+    },
   },
   stats: "minimal",
 }

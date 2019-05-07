@@ -4,14 +4,18 @@
   "description": "Client for techmeet app",
   "main": "techmeet/static/app/index.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-styled-components": "^1.10.0",
     "css-loader": "^2.1.1",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
