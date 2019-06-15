@@ -8,17 +8,14 @@ class Header extends Component {
     return (
       <HeaderStyle>
         <img src={logo} alt="logo" />
-        <Link to="/app">Techmeet</Link>
+        <Link to="/">Techmeet</Link>
 
         <ul>
           <li>
-            <Link to="/app/users">Users</Link>
+            <Link to="/users">Users</Link>
           </li>
           <li>
-            <Link to="/app/groups">Groups</Link>
-          </li>
-          <li>
-            <Link to="/app/techgroups">Techgroups</Link>
+            <Link to="/techgroups">Techgroups</Link>
           </li>
         </ul>
       </HeaderStyle>
