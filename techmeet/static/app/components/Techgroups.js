@@ -40,6 +40,7 @@ class Techgroups extends Component {
         <ul>
           {items.map(item => (
             <li key={item.id}>
+              <img src={item.logo} alt="" />
               {item.name} - {item.description}
             </li>
           ))}

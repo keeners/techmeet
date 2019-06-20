@@ -40,7 +40,7 @@ class Users extends Component {
         <ul>
           {items.map(item => (
             <li key={item.id}>
-              {item.name} - {item.description}
+              {item.name} - {item.email}
             </li>
           ))}
         </ul>
