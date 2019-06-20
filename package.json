@@ -31,8 +31,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint --ext .js,.jsx src",
-    "lint:fix": "eslint --ext .js,.jsx --fix src",
+    "lint": "eslint --ext .js,.jsx ./techmeet/static/app/",
+    "lint:fix": "eslint --ext .js,.jsx --fix ./techmeet/static/app/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
