@@ -14,10 +14,10 @@ class Query extends Component {
 
   componentDidMount() {
     api[this.props.query]()
-      .then(result => {
+      .then(response => {
         this.setState({
           loading: false,
-          data: result.data.results,
+          data: response.data.results,
         })
       })
       .catch(error => {
