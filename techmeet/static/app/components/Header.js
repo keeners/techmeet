@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import logo from '@/assets/logo.svg';
-import HeaderStyle from './styles/HeaderStyle';
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import logo from "@/assets/logo.svg"
+import HeaderStyle from "./styles/HeaderStyle"
 
 class Header extends Component {
   render() {
@@ -22,4 +22,4 @@ class Header extends Component {
     )
   }
 }
-export default Header;
+export default Header

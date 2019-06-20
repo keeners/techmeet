@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react"
 
 const Index = props => (
   <div>
     <h1>Index</h1>
   </div>
-);
+)
 
-export default Index;
+export default Index

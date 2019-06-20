@@ -5,27 +5,27 @@ export default {
    * Users
    */
   getUsers() {
-    return session.get("/api/users/");
+    return session.get("/api/users/")
   },
 
   /*
    * Techgroups
    */
   getTechgroups() {
-    return session.get("/api/techgroups/");
+    return session.get("/api/techgroups/")
   },
 
   /*
    * Events
    */
   getEvents() {
-    return session.get("/api/events/");
+    return session.get("/api/events/")
   },
 
   /*
    * Members
    */
   getMembers() {
-    return session.get("/api/members/");
+    return session.get("/api/members/")
   },
 }
