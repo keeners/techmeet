@@ -15,6 +15,7 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-styled-components": "^1.10.0",
     "css-loader": "^2.1.1",
@@ -22,6 +23,7 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "file-loader": "^3.0.1",
+    "jest": "^24.8.0",
     "prettier": "1.16.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
@@ -33,7 +35,7 @@
     "build": "webpack --config webpack.config.js",
     "lint": "eslint --ext .js,.jsx ./techmeet/static/app/",
     "lint:fix": "eslint --ext .js,.jsx --fix ./techmeet/static/app/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -49,5 +51,13 @@
   "bugs": {
     "url": "https://github.com/keeners/techmeet/issues"
   },
-  "homepage": "https://github.com/keeners/techmeet#readme"
+  "homepage": "https://github.com/keeners/techmeet#readme",
+  "jest": {
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules"],
+    "moduleNameMapper": {
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/techmeet/static/app/tests/unit/mocks/fileMock.js",
+      "^@/(.*)$": "<rootDir>/techmeet/static/app/$1"
+    }
+  }
 }
