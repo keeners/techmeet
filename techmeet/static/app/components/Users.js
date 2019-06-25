@@ -15,8 +15,8 @@ class Users extends Component {
           return (
             <ul>
               {data.map(item => (
-                <li key={item.email}>
-                  <a href={`/users/${item.id}`}>
+                <li key={item.id}>
+                  <a href={`/users/${item.id}/`}>
                     {item.name} - {item.email}
                   </a>
                 </li>

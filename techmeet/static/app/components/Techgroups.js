@@ -16,8 +16,10 @@ class Techgroups extends Component {
             <ul>
               {data.map(item => (
                 <li key={item.id}>
-                  <img src={item.logo} alt="" />
-                  {item.name} - {item.description}
+                  <a href={`/techgroups/${item.id}/`}>
+                    <img src={item.logo} alt="" />
+                    {item.name} - {item.description}
+                  </a>
                 </li>
               ))}
             </ul>

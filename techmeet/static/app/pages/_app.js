@@ -7,6 +7,7 @@ import Index from "./index"
 import Users from "./users"
 import User from "./user"
 import Techgroups from "./techgroups"
+import Techgroup from "./techgroup"
 
 class App extends Component {
   render() {
@@ -17,7 +18,8 @@ class App extends Component {
           <Route exact path="/" component={Index} />
           <Route exact path="/users/" component={Users} />
           <Route path="/users/:id" component={User} />
-          <Route path="/techgroups/" component={Techgroups} />
+          <Route exact path="/techgroups/" component={Techgroups} />
+          <Route path="/techgroups/:id" component={Techgroup} />
           <Route component={NotFound} />
         </Switch>
       </Page>

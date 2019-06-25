@@ -17,6 +17,9 @@ export default {
   getTechgroups() {
     return session.get("/api/techgroups/")
   },
+  getTechgroup({id}) {
+    return session.get(`/api/techgroups/${id}/`)
+  },
 
   /*
    * Events
