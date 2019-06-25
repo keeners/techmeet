@@ -13,11 +13,13 @@ class Query extends Component {
   }
 
   componentDidMount() {
-    api[this.props.query]()
+    api[this.props.query](this.props.variables)
       .then(response => {
         this.setState({
           loading: false,
-          data: response.data.results,
+          // data will have results prop only when requesting DRF ListViews,
+          // otherwise it should just return the detail object
+          data: response.data.results ? response.data.results : response.data,
         })
       })
       .catch(error => {

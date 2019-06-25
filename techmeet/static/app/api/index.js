@@ -7,6 +7,9 @@ export default {
   getUsers() {
     return session.get("/api/users/")
   },
+  getUser({id}) {
+    return session.get(`/api/users/${id}/`)
+  },
 
   /*
    * Techgroups

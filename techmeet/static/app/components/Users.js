@@ -16,7 +16,9 @@ class Users extends Component {
             <ul>
               {data.map(item => (
                 <li key={item.email}>
-                  {item.name} - {item.email}
+                  <a href={`/users/${item.id}`}>
+                    {item.name} - {item.email}
+                  </a>
                 </li>
               ))}
             </ul>
