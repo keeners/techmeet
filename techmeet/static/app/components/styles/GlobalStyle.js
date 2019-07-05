@@ -1,6 +1,12 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
   body {
     margin: 0;
     padding: 0;
@@ -8,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-`;
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.black};
+  }
+`
 
-export default GlobalStyle;
+export default GlobalStyle

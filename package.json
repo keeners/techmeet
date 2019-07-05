@@ -7,6 +7,7 @@
     "axios": "^0.18.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.1",
     "react-router-dom": "^5.0.0",
     "styled-components": "^4.2.0"
   },
@@ -30,8 +31,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.config.js",
-    "lint": "eslint --ext .js,.jsx src",
-    "lint:fix": "eslint --ext .js,.jsx --fix src",
+    "lint": "eslint --ext .js,.jsx ./techmeet/static/app/",
+    "lint:fix": "eslint --ext .js,.jsx --fix ./techmeet/static/app/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

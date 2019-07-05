@@ -14,7 +14,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:  # noqa: D106
         model = User
-        fields = ("url", "email", "name", "date_joined", "groups")
+        fields = ("id", "url", "email", "name", "date_joined", "groups")
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
 const Header = styled.header`
   background-color: #282c34;
@@ -27,6 +27,6 @@ const Header = styled.header`
       margin-left: 20px;
     }
   }
-`;
+`
 
-export default Header;
+export default Header
