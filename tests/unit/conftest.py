@@ -1,4 +1,4 @@
-"""Fixtures used for user tests."""
+"""Fixtures used for unit tests."""
 
 from pytest_factoryboy import register
 
@@ -8,3 +8,4 @@ register(factories.UserFactory)
 register(factories.SuperUserFactory)
 register(factories.TechGroupFactory)
 register(factories.MembershipFactory)
+register(factories.EventFactory)
