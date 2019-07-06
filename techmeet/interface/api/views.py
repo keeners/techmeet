@@ -30,3 +30,10 @@ class TechGroupViewSet(viewsets.ModelViewSet):
 
     queryset = models.TechGroup.objects.all()
     serializer_class = serializers.TechGroupSerializer
+
+
+class MembershipViewSet(viewsets.ModelViewSet):
+    """API endpoint that shows user/group membership."""
+
+    queryset = models.Membership.objects.all()
+    serializer_class = serializers.MembershipSerializer

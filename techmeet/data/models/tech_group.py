@@ -2,6 +2,7 @@
 
 from typing import Any
 
+from django.conf import settings
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -21,6 +22,9 @@ class TechGroup(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     description = models.TextField(blank=True)
     logo = models.FileField(_("logo"), upload_to=tech_group_folder, blank=True)
+    members = models.ManyToManyField(
+        settings.AUTH_USER_MODEL, through="data.Membership", verbose_name=_("members")
+    )
 
     def __str__(self) -> str:
         """Return name as a string."""
