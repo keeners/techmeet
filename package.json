@@ -25,6 +25,7 @@
     "file-loader": "^3.0.1",
     "jest": "^24.8.0",
     "prettier": "1.16.4",
+    "react-test-renderer": "^16.8.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
@@ -53,8 +54,13 @@
   },
   "homepage": "https://github.com/keeners/techmeet#readme",
   "jest": {
-    "moduleFileExtensions": ["js", "jsx"],
-    "moduleDirectories": ["node_modules"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "moduleNameMapper": {
       "\\.(gif|ttf|eot|svg)$": "<rootDir>/techmeet/static/app/tests/unit/mocks/fileMock.js",
       "^@/(.*)$": "<rootDir>/techmeet/static/app/$1"
