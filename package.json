@@ -4,7 +4,7 @@
   "description": "Client for techmeet app",
   "main": "techmeet/static/app/index.js",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.1",
