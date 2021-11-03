@@ -39,3 +39,11 @@ class MembershipSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:  # noqa D106
         model = models.Membership
         fields = ("id", "tech_group", "user", "date_joined")
+
+
+class EventSerializer(serializers.HyperlinkedModelSerializer):
+    """Event serializer."""
+
+    class Meta:  # noqa D106
+        model = models.Event
+        fields = ("id", "name", "tech_group", "start", "end", "description")

@@ -37,3 +37,10 @@ class MembershipViewSet(viewsets.ModelViewSet):
 
     queryset = models.Membership.objects.all()
     serializer_class = serializers.MembershipSerializer
+
+
+class EventViewSet(viewsets.ModelViewSet):
+    """API endpoint for events."""
+
+    queryset = models.Event.objects.all()
+    serializer_class = serializers.EventSerializer

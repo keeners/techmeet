@@ -52,3 +52,16 @@ def test_get_all_memberships(
     )
     response.data == serializer.data
     response.status_code == status.HTTP_200_OK
+
+
+@pytest.mark.django_db
+def test_get_all_events(
+    client: Client, event_factory: factories.EventFactory, context: Dict
+) -> None:
+    """Test serializer returns events."""
+    event_factory()
+    response = client.get("api/events/")
+    events = models.Event.objects.all()
+    serializer = serializers.EventSerializer(events, many=True, context=context)
+    response.data = serializer.data
+    response.status_code = status.HTTP_200_OK
